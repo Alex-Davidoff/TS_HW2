@@ -1,9 +1,9 @@
-function calc_area(a, b){
+function calc_area(a : number, b : number): number {
     return a * b;
 }
 
-let a=5;
-let b=10;
+let a : number = 5;
+let b : number = 10;
 let rect_area = calc_area(a, b);
 
 console.log(a, b, rect_area);
