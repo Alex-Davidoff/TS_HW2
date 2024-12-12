@@ -1,15 +1,19 @@
-function cards36_init(){
-    const suit = ['spade', 'diamond', 'heart', 'clubs'];
-    const value = ['6', '7', '8', '9', '10', 'jack', 'queen', 'king', 'ace'];
-    let tarr = [];
-    for (const tsuit of suit){
-        for (const tvalue of value){
-            let tcard = {}
-            tcard.cardSuit = tsuit;
-            tcard.cardValue = tvalue;
-            if ((tcard.cardSuit === 'spade') || (tcard.cardSuit === 'clubs')){
+function cards36_init() {
+    var suit = ['spade', 'diamond', 'heart', 'clubs'];
+    var value = ['6', '7', '8', '9', '10', 'jack', 'queen', 'king', 'ace'];
+    var tarr = [];
+    for (var _i = 0, suit_1 = suit; _i < suit_1.length; _i++) {
+        var tsuit = suit_1[_i];
+        for (var _a = 0, value_1 = value; _a < value_1.length; _a++) {
+            var tvalue = value_1[_a];
+            var tcard = {
+                cardSuit: tsuit,
+                cardValue: tvalue
+            };
+            if ((tcard.cardSuit === 'spade') || (tcard.cardSuit === 'clubs')) {
                 tcard.cardColor = 'black';
-            } else {
+            }
+            else {
                 tcard.cardColor = 'red';
             }
             tarr.push(tcard);
@@ -17,14 +21,24 @@ function cards36_init(){
     }
     return tarr;
 }
-
-let deskofcards = cards36_init();
+var deskofcards = cards36_init();
 console.log(deskofcards);
-
-console.log(deskofcards.reduce((acc, tcard) => {
-    if (tcard.cardSuit==='spade'){acc.spades.push(tcard)};
-    if (tcard.cardSuit==='diamond'){acc.diamonds.push(tcard)};
-    if (tcard.cardSuit==='heart'){acc.hearts.push(tcard)};
-    if (tcard.cardSuit==='clubs'){acc.clubs.push(tcard)};
+console.log(deskofcards.reduce(function (acc, tcard) {
+    if (tcard.cardSuit === 'spade') {
+        acc.spades.push(tcard);
+    }
+    ;
+    if (tcard.cardSuit === 'diamond') {
+        acc.diamonds.push(tcard);
+    }
+    ;
+    if (tcard.cardSuit === 'heart') {
+        acc.hearts.push(tcard);
+    }
+    ;
+    if (tcard.cardSuit === 'clubs') {
+        acc.clubs.push(tcard);
+    }
+    ;
     return acc;
-}, {spades:[],diamonds:[],hearts:[],clubs:[]}));
+}, { spades: [], diamonds: [], hearts: [], clubs: [] }));

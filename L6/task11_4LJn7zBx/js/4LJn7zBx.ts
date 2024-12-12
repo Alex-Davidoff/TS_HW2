@@ -1,9 +1,11 @@
-var Cource = /** @class */ (function () {
-    function Cource() {
-    }
-    return Cource;
-}());
-var coursesArray = [
+class Cource{
+    title: string;
+    monthDuration: number;
+    hourDuration: number;
+    modules: Array<string>
+}
+
+let coursesArray: Array<Cource> = [
     {
         title: 'JavaScript Complex',
         monthDuration: 5,
@@ -42,7 +44,7 @@ var coursesArray = [
     }
 ];
 console.log('---- sass');
-console.log(coursesArray.filter(function (value) { return (value.modules.indexOf('sass') > -1); }));
-console.log(coursesArray.filter(function (value) { return (value.modules.some(function (subval) { return subval === 'sass'; })); }));
+console.log(coursesArray.filter(value => (value.modules.indexOf('sass')>-1)));
+console.log(coursesArray.filter(value => (value.modules.some(subval => subval==='sass'))));
 console.log('---- docker');
-console.log(coursesArray.filter(function (value) { return (value.modules.some(function (subval) { return subval === 'docker'; })); }));
+console.log(coursesArray.filter(value => (value.modules.some(subval => subval==='docker'))));
