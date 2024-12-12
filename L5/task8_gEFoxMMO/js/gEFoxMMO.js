@@ -1,29 +1,28 @@
-let t_arr = [];
-
-function t_arr_init(l,n_type){
+var t_arr = [];
+function t_arr_init(l, n_type) {
     t_arr = [];
-    for (let c=0; c<l; c++){
-        let el;
-        if (n_type===0){
-            el = c*c;
-        } else if (n_type===1){
-            el = 'elem_'+(c+1);
-        } else if (n_type===2){
+    var el = 0;
+    for (var c = 0; c < l; c++) {
+        if (n_type === 0) {
+            el = c * c;
+        }
+        else if (n_type === 1) {
+            el = 'elem_' + (c + 1);
+        }
+        else if (n_type === 2) {
             el = (c % 2 === 0) ? true : false;
         }
-    t_arr.push(el);    
+        t_arr.push(el);
     }
 }
-
-t_arr_init(8,0);
+t_arr_init(8, 0);
 console.log(t_arr);
-
-let t_arr_show = (sh_arr) => {
+var t_arr_show = function (sh_arr) {
     document.write('<ul>');
-    for (const elem of sh_arr){
-        document.write('<li>'+elem+'</li>');
+    for (var _i = 0, sh_arr_1 = sh_arr; _i < sh_arr_1.length; _i++) {
+        var elem = sh_arr_1[_i];
+        document.write('<li>' + elem + '</li>');
     }
     document.write('</ul>');
-}
-
-let tval = t_arr_show(t_arr);
+};
+var tval = t_arr_show(t_arr);

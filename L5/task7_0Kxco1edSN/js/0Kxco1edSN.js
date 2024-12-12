@@ -1,9 +1,8 @@
-let write_text_in_ul = (input_text,repeats) =>{
+var write_text_in_ul = function (input_text, repeats) {
     document.write('<ul>');
-    for (let c = 0; c<repeats; c++){
-        document.write('<li>'+input_text+'</li>');
+    for (var c = 0; c < repeats; c++) {
+        document.write('<li>' + input_text + '</li>');
     }
     document.write('</ul>');
-}
-
-const tval = write_text_in_ul('test text',8);
+};
+var tval = write_text_in_ul('test text', 8);
